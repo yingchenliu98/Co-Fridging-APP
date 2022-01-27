@@ -1,0 +1,14 @@
+import Vue from 'vue';
+import VueCookie from 'vue-cookie';
+import App from './App.vue';
+import router from './router';
+export const eventBus = new Vue();
+
+Vue.use(VueCookie);
+
+Vue.config.productionTip = false;
+
+new Vue({
+  router,
+  render: (h) => h(App),
+}).$mount('#app');
